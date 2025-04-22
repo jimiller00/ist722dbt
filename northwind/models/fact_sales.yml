@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: One row per product item ordered
+    columns:
+      - name: OrderId
+        description: Degenerate dimension for the order
+        tests:
+            - unique
+            - not_null
+      - name: productkey
+        description: Dimension key for dim_product
+      - name: unitprice
+        description: price of a single unit of product
+      - name: discount
+        description: amount discounted off each unit price
+      - name: quantity
+        description: amount of the product
+      - name:  extendedpriceamount
+        description: price of order before discounts
+      - name: discountamount
+        description: total amount discounted from order
+      - name: soldamount
+        description: final price order was sold for
