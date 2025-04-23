@@ -6,6 +6,6 @@ d_product as (
 )
 select 
     d_product.*,
-    f.orderid, f.unitprice, f.quantity, f.discount, f.extendedprice, f.discountamount, f.soldamount
+    f.orderid, f.quantity, f.discount, f.extendedprice, f.discountamount, f.soldamount
     from f_sales as f
     left join d_product on f.productkey = d_product.productkey
